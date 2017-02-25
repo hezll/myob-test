@@ -56,10 +56,10 @@ $config = [
 
         'db'=>[
             'class'=>'yii\db\Connection',
-            'dsn' => env('DB_DSN'),
-            'username' => env('DB_USERNAME'),
-            'password' => env('DB_PASSWORD'),
-            'tablePrefix' => env('DB_TABLE_PREFIX'),
+            'dsn' => 'mysql:host=47.91.42.123;dbname=tipple_invoice',//env('DB_DSN'),
+            'username' => 'adminkey',//env('DB_USERNAME'),
+            'password' => 'F92158fzWadmin',//env('DB_PASSWORD'),
+            'tablePrefix' => 't_',//env('DB_TABLE_PREFIX'),
             'charset' => 'utf8',
             'enableSchemaCache' => YII_ENV_PROD,
         ],
