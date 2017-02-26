@@ -16,7 +16,10 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="article-index">
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+    <p>
+        Waiting to add analysis logic
 
+    </p>
     <?php
     echo GridView::widget([
         'dataProvider' => $dataProvider,
