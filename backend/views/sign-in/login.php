@@ -5,10 +5,11 @@ use yii\bootstrap\ActiveForm;
 /* @var $this yii\web\View */
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $model \backend\models\LoginForm */
-
+\Yii::$app->language = 'en-Us';
 $this->title = Yii::t('backend', 'Sign In');
 $this->params['breadcrumbs'][] = $this->title;
 $this->params['body-class'] = 'login-page';
+
 ?>
 <div class="login-box">
     <div class="login-logo">

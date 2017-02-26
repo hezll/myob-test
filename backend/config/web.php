@@ -82,7 +82,7 @@ $config = [
     ]
 ];
 
-if (YII_ENV_DEV) {
+if (YII_ENV_DEV||1==1) {
     $config['modules']['gii'] = [
         'class'=>'yii\gii\Module',
         'generators' => [

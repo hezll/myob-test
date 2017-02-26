@@ -33,6 +33,9 @@ class ArticleController extends Controller
      */
     public function actionIndex()
     {
+        echo Yii::$app->request->userIP;
+        echo 'ddd';
+        echo YII_ENV_DEV;
         $searchModel = new ArticleSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         $dataProvider->sort = [
