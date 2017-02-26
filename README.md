@@ -1,4 +1,4 @@
-# Tipple Invoice v-0.1.1
+# Tipple Invoice v-0.1.1 
 
 <!-- BADGES/ -->
 
@@ -30,11 +30,22 @@ username:manager
 
 password:manager
 
+Because I visted my friend in the weekend and I only have one day to do this.
+So I finished the whole environment building up and Main Management System Framework.
+
+You can login and view content=> dbf to see the analysis for the dbf file.
+
+I also created the products table and will add the connection between the dbf file to the products.
+
+I will add tax rate and fee calculator in the future.
+
+
+
 ####Tasks
 ##### Main functions
 Main Management System Framework(DONE)
 
-DBF file analysis(DONE)
+DBF file analysis(TODO)
 
 DBF file insert DB (TODO)
 
