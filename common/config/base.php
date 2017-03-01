@@ -170,7 +170,7 @@ if (YII_ENV_PROD) {
     ];
 }
 
-if (YII_ENV_DEV) {
+if (1) {
     $config['bootstrap'][] = 'gii';
     $config['modules']['gii'] = [
         'class'=>'yii\gii\Module'

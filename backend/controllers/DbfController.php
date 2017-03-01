@@ -46,4 +46,8 @@ class DbfController extends Controller
 
         return $this->render('index',['dataProvider' =>$dataProvider]);
     }
+
+    public function actionTest(){
+
+    }
 }

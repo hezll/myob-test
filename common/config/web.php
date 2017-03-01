@@ -22,6 +22,7 @@ if (YII_DEBUG) {
 }
 
 if (YII_ENV_DEV) {
+    $config['bootstrap'][] = 'gii';
     $config['modules']['gii'] = [
         'allowedIPs' => ['127.0.0.1', '::1', '192.168.33.1', '172.17.42.1', '172.17.0.1', '192.168.99.1'],
     ];
