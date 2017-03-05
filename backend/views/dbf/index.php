@@ -1,29 +1,36 @@
 <?php
 
-use common\grid\EnumColumn;
-use common\models\ArticleCategory;
-use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel backend\models\search\ArticleSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('backend', 'Dbf file');
+$this->title = 'Dbfs';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="article-index">
+<div class="dbf-index">
 
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+    <h1><?= Html::encode($this->title) ?></h1>
+
     <p>
-        Waiting to add analysis logic
-
+        <?= Html::a('Create Dbf', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
-    <?php
-    echo GridView::widget([
+    <?= GridView::widget([
         'dataProvider' => $dataProvider,
-    ]);
+        'columns' => [
+            ['class' => 'yii\grid\SerialColumn'],
 
-    ?>
+            'id',
+            'name',
+            'company',
+            'description',
+            'size',
+            // 'created_at',
+            // 'updated_at',
+            // 'status',
+
+            ['class' => 'yii\grid\ActionColumn'],
+        ],
+    ]); ?>
 </div>

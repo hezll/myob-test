@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use yii\data\ActiveDataProvider;
+use yii\grid\GridView;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\Invoice */
@@ -36,4 +38,27 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]) ?>
 
+    <?php
+
+
+    $dataProvider = new ActiveDataProvider([
+        'query' => $model->getProducts(),
+    ]);
+
+    echo  GridView::widget([
+        'dataProvider' => $dataProvider,
+        'columns' => [
+            ['class' => 'yii\grid\SerialColumn'],
+
+            'product_code',
+            'cat',
+            'inds',
+            'description',
+            'size',
+            // 'pack_qty',
+
+            ['class' => 'yii\grid\ActionColumn'],
+        ],
+    ]);
+    ?>
 </div>

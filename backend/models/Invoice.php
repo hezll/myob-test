@@ -48,4 +48,10 @@ class Invoice extends \yii\db\ActiveRecord
             'invoice_total' => 'Invoice Total',
         ];
     }
+
+    public function getProducts()
+    {
+        return $this->hasMany(Product::className(), ['product_code' => 'product_code'])
+            ->viaTable('t_invoice_product', ['invoice_number' => 'invoice_number']);
+    }
 }
