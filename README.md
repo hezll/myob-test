@@ -1,4 +1,4 @@
-# Tipple Invoice v-0.1.1 
+# Tipple Invoice v-0.1.3 
 
 <!-- BADGES/ -->
 
@@ -42,16 +42,28 @@ I will add tax rate and fee calculator in the future.
 
 
 ####Tasks
+
+1. add dbf upload;
+2. add dbf analysis
+3. add invocie list
+4. add product list
+5. http://i.tp.com/invoice/view?id=43180  can view a normal invoice. 
+6. table including product , invoice, dbf , product_invoice
+
+TODO:
+1. analysis some more detail, like total amount or other info
+2. more stable
+3. adding some frontend effect 
 ##### Main functions
 Main Management System Framework(DONE)
 
-DBF file analysis(TODO)
+DBF file analysis(DONE)
 
-DBF file insert DB (TODO)
+DBF file insert DB (DONE)
 
 Products Management(done with out DBF insert products)
 
-Inovice Mangement (TODO)
+Inovice Mangement (DONE)
 
 Fees&Tax Caculator (TODO)
 
