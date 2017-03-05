@@ -37,6 +37,12 @@ class DbfController extends Controller
     {
         $dataProvider = new ActiveDataProvider([
             'query' => Dbf::find(),
+            'sort' => [
+                'defaultOrder' => [
+                    'updated_at' => SORT_DESC,
+
+                ]
+            ],
         ]);
 
         return $this->render('index', [
