@@ -46,7 +46,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         $model->name,
                         ['dbf-download', 'id' => $model->id])
                     ?>
-                    (<?php echo Yii::$app->formatter->asSize($model->size) ?>)
+                    (<?php echo $model->size ?>)
                 </li>
         </ul>
     <?php endif; ?>
