@@ -71,7 +71,7 @@ class DbfController extends Controller
     {
         $model = new Dbf();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save() &&$model->processDbf()) {
+        if ($model->load(Yii::$app->request->post()) && $model->save() && $model->processDbf()) {
             return $this->redirect(['index']);
             //return $this->redirect(['view', 'id' => $model->id]);
         } else {

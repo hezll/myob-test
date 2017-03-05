@@ -47,7 +47,7 @@ I will add tax rate and fee calculator in the future.
 2. add dbf analysis
 3. add invocie list
 4. add product list
-5. http://i.tp.com/invoice/view?id=43180  can view a normal invoice. 
+5. http://tipple.rewentuijian.com/invoice/view?id=43180  can view a normal invoice. 
 6. table including product , invoice, dbf , product_invoice
 
 TODO:

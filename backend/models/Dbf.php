@@ -183,6 +183,7 @@ class Dbf extends \yii\db\ActiveRecord
 
                 }
             }
+            return true;
             //TDOO insert product
         }catch (TableException  $e){
             $this->addError('dbffile','is not DBF,pleas check it later');
