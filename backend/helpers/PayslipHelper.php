@@ -33,7 +33,7 @@ class PayslipHelper
     private $_incomeTax;
 
 
-    public function __construct($salary, $rate, $month)
+    public function __construct($salary=0, $rate=0, $month=1)
     {
         $this->salary = $salary;
         $this->rate = $rate;
@@ -64,7 +64,8 @@ class PayslipHelper
     }
 
     public function getPayPeriod(){
-        return $this->getMonthlist()[$this->month];
+        $tmp = $this->getMonthlist();
+        return $tmp[$this->month];
     }
 
     public function getGrossIncome(){
