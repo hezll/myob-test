@@ -1,5 +1,7 @@
 <?php
+namespace myob_test\tests\unit;
 
+use backend\helpers\PayslipHelper;
 
 class PayslipTest extends \Codeception\Test\Unit
 {
@@ -9,7 +11,7 @@ class PayslipTest extends \Codeception\Test\Unit
     public $rate;
     public $startMonth;
 
-
+    public $payslipClass;
 
     /**
      * @var \UnitTester
@@ -22,8 +24,11 @@ class PayslipTest extends \Codeception\Test\Unit
     {
         //init payslip
         $this->salary = 60050;
-        $this->rate = 9;
+        $this->rate = 0.09;
         $this->startMonth = 3;
+
+        $this->payslipClass = new PayslipHelper($this->salary, $this->rate, $this->startMonth);
+
     }
 
     protected function _after()
@@ -33,14 +38,15 @@ class PayslipTest extends \Codeception\Test\Unit
     // tests
     public function testPayPeriod()
     {
-
+        $payPeriod = $this->payslipClass->getPayPeriod();
+        $this->assertEquals('01 March to 31 March', $payPeriod);
     }
 
     // tests
     public function testGrossIncome()
     {
         //process by myob
-        $grossIcome = 5004;
+        $grossIcome = $this->payslipClass->getGrossIncome();
         $this->assertEquals(5004, $grossIcome);
 
         //process by myob
@@ -55,7 +61,7 @@ class PayslipTest extends \Codeception\Test\Unit
     // test income tax
     public function testIncomeTax()
     {
-        $incomeTax = 922;
+        $incomeTax = $this->payslipClass->getIncomeTax();
         $this->assertEquals(922, $incomeTax);
 
         $incomeTax = 922;
@@ -68,7 +74,7 @@ class PayslipTest extends \Codeception\Test\Unit
     // test net income
     public function testNetIncome()
     {
-        $netIncome = 4082;
+        $netIncome = $this->payslipClass->getNetIncome();
         $this->assertEquals(4082, $netIncome);
 
         $netIncome = 4082;
@@ -81,7 +87,7 @@ class PayslipTest extends \Codeception\Test\Unit
     // tests super
     public function testSuper()
     {
-        $super = 450;
+        $super = $this->payslipClass->getSuper();
         $this->assertEquals(450,$super);
 
         $super = 450;
