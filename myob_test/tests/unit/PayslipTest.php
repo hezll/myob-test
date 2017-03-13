@@ -29,6 +29,7 @@ class PayslipTest extends \Codeception\Test\Unit
 
         $this->payslipClass = new PayslipHelper($this->salary, $this->rate, $this->startMonth);
 
+        // we can add more test case
     }
 
     protected function _after()
@@ -49,11 +50,11 @@ class PayslipTest extends \Codeception\Test\Unit
         $grossIcome = $this->payslipClass->getGrossIncome();
         $this->assertEquals(5004, $grossIcome);
 
-        //process by myob
+        // we can add more test case
         $grossIcome = 5004;
         $this->assertEquals(5004, $grossIcome);
 
-        //process by myob
+        // we can add more test case
         $grossIcome = 5004;
         $this->assertEquals(5004, $grossIcome);
     }
