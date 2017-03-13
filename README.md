@@ -16,6 +16,8 @@ I add the part of products mangement, test management,
 The demo address is 
 http://my.rewentuijian.com/
 
+http://my.rewentuijian.com/payslip/create
+
 username:manager
 
 password:manager
